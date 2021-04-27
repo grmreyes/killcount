@@ -408,6 +408,7 @@ function enemy(image, x, y) {
             }
             else if(this.frameCount>=this.animSpeed*10){
                 this.image=hkEnemyDeath11
+                document.querySelector(".title").classList.remove("red")
             }
             else if(this.frameCount>=this.animSpeed*9){
                 this.image=hkEnemyDeath10
@@ -420,7 +421,6 @@ function enemy(image, x, y) {
             }
             else if(this.frameCount>=this.animSpeed*6){
                 this.image=hkEnemyDeath7
-                document.querySelector(".title").classList.remove("red")
             }
             else if(this.frameCount>=this.animSpeed*5){
                 this.image=hkEnemyDeath6
