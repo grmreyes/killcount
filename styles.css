@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap');
 canvas {
     width: 100%;
     height: auto;
@@ -7,10 +8,26 @@ canvas {
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
+    /* -webkit-box-shadow:0 0 50px 10px rgba(255, 255, 255, 0.315);
+    -moz-box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.315); 
+    box-shadow:0 0 50px 10px rgba(255, 255, 255, 0.315); */
   }
 
   .screen{
     width:40%;
+  }
+
+  .main-container{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+  }
+  .count-container{
+    width: 30%;
+  }
+
+  .movie-info-container{
+    width: 30%;
   }
 
 
@@ -23,6 +40,7 @@ canvas {
     color: white;
     width: 100%;
     margin: 0;
+    font-family: 'Oswald', sans-serif;
   }
 
   .seats{
@@ -33,4 +51,48 @@ canvas {
   body{
     background-color: black;
     position: fixed;
+  }
+
+  .title-container{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    align-items: flex-end;
+  }
+  .title{
+    font-size: 6vw;
+    display: inline-block;
+    background: black;
+    -webkit-transform: skew(-10deg) rotate(-10deg);
+    transform: skew(-10deg) rotate(-10deg);
+    padding: 12px 5px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all 0.3s;
+  }
+
+  .count-num{
+    position: relative;
+    text-align: center;
+    font-size: 8vw;
+    display: inline-block;
+    background: black;
+    -webkit-transform: skew(-10deg) rotate(-10deg);
+    transform: skew(-10deg) rotate(-10deg);
+    margin-top: 10px;
+    left: 40%;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all 0.3s;
+  }
+
+  .red{
+    color: red
+  }
+  
+  .title span {
+    font-weight: 600;
+    color:white
   }

@@ -131,7 +131,6 @@ hkEnemyDeath12.src = "./assets/images/barbarian/Death/hkEnemyDeath12.png"
 
 
 
-
 function startGame() {
     heroChar = new hero(hkIdle1, 3, 27);
     myBackground = new background(bg1, -180, -115);
@@ -139,7 +138,15 @@ function startGame() {
     deadEnemies = new deadEnemyList(hkEnemyDeath12)
     swing = new sound("./assets/sfx/swing.wav");
     hit = new sound("./assets/sfx/hit.wav");
+    die1 = new sound("./assets/sfx/die1.wav");
+    die2 = new sound("./assets/sfx/die2.wav");
+    bg1 = new sound("./assets/music/bg1.ogg");
+    bg1.sound.volume = 0.14;
+    bg1.sound.setAttribute("loop", "true");
     myGameArea.start();
+
+
+
 }
 
 var myGameArea = {
@@ -151,6 +158,8 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         div.appendChild(this.canvas);
         this.enemyPresent = false;
+        this.killCount = 0;
+        this.muted = false;
         this.interval = setInterval(updateGameArea, 20);
         },
     clear : function() {
@@ -163,7 +172,8 @@ var myGameArea = {
         if(this.enemyPresent===false){
             enemyChar.x = 170;
             enemyChar.y = 18;
-            enemyChar.speedX = -0.7;
+            enemyChar.speedX = (Math.random()*-1)-1;
+            enemyChar.speedY = 0;
             this.enemyPresent=true;
         }
         if(enemyChar.x<=heroChar.x+12){
@@ -188,6 +198,7 @@ function deadEnemyList(image) {////needs to be an array
     this.update = function() {
         ctx = myGameArea.context;
         this.locations.forEach(location =>{
+            ctx.imageSmoothingEnabled = false;
             ctx.drawImage(this.image, location[0], location[1]) 
         })
         
@@ -385,6 +396,8 @@ function enemy(image, x, y) {
         if(this.animation==="death"){
             if(this.frameCount>=this.animSpeed*12){
                 deadEnemies.locations.push([this.x,this.y]);
+                deadEnemies.update();
+                this.x=170;
                 myGameArea.enemyPresent=false;
                 this.frameCount = 0;
                 this.animation = "run"
@@ -407,6 +420,7 @@ function enemy(image, x, y) {
             }
             else if(this.frameCount>=this.animSpeed*6){
                 this.image=hkEnemyDeath7
+                document.querySelector(".title").classList.remove("red")
             }
             else if(this.frameCount>=this.animSpeed*5){
                 this.image=hkEnemyDeath6
@@ -415,7 +429,7 @@ function enemy(image, x, y) {
                 this.image=hkEnemyDeath5
             }
             else if(this.frameCount>=this.animSpeed*3){
-                this.image=hkEnemyDeath4
+                this.image=hkEnemyDeath4     
             }
             else if(this.frameCount>=this.animSpeed*2){
                 this.image=hkEnemyDeath3
@@ -428,6 +442,7 @@ function enemy(image, x, y) {
             }
         }
         ctx = myGameArea.context;
+        ctx.imageSmoothingEnabled = false;
         ctx.drawImage(this.image, this.x, this.y);
         
         
@@ -443,12 +458,15 @@ function enemy(image, x, y) {
 function updateGameArea() {
     myGameArea.clear();  
     myBackground.update();
-    myGameArea.startEnemy();  
     deadEnemies.update();
+    myGameArea.startEnemy();  
     heroChar.newPos();    
     heroChar.update();
     enemyChar.newPos();    
     enemyChar.update();
+    if(bg1.sound.currentTime>bg1.sound.duration-0.2){
+        bg1.play();
+    }
 }
 
 function move(dir) {
@@ -460,17 +478,56 @@ function move(dir) {
 }
 
 function attack() {
+    if(bg1.sound.paused){
+    bg1.play()
+    }
     //heroChar.image.src = "angry.gif";
     heroChar.frameCount = 0;
     if (enemyChar.x<=heroChar.x+50){
         enemyChar.speedX = 0;
-        enemyChar.frameCount = 0;
+        if(enemyChar.animation!="death"){
+            enemyChar.frameCount = 0;
+            myGameArea.killCount+=1
+            document.querySelector(".title").classList.add("red")
+            document.querySelector(".count-num").innerHTML = myGameArea.killCount;
+        }
         enemyChar.animation = "death";
+
+        if(myGameArea.muted===false){
+            hit.play();
+            if(Math.random()>0.9){
+                die2.play();
+            }
+            else{
+                die1.play();
+            }
+        }
+        
+        enemyChar.speedX = Math.random()*0.2;
+        enemyChar.speedY = Math.random()*0.1;
+        enemyChar.speedY += Math.random()*(-0.1);
     }
-    swing.play();
+    else{
+        if(myGameArea.muted===false){
+            swing.play();
+        }
+    }
     if(heroChar.attackSeq==1) {heroChar.animation = "attack1"; heroChar.attackSeq=2}
     else if(heroChar.attackSeq==2) {heroChar.animation = "attack2"; heroChar.attackSeq=3}
     else if(heroChar.attackSeq==3) {heroChar.animation = "attack3"; heroChar.attackSeq=1}
+}
+
+function handleMute(){
+    
+    if(myGameArea.muted===false){
+        bg1.sound.muted = true;
+        myGameArea.muted = true;
+    }
+    else{
+        bg1.sound.muted = false;
+        myGameArea.muted = false;
+    }
+    console.log(myGameArea.muted)
 }
 
 function zoomOut() {
