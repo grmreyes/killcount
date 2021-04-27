@@ -78,6 +78,55 @@ hkAtk36.src = "./assets/images/hero/Attack3/hkAtk36.png"
 hkAtk37.src = "./assets/images/hero/Attack3/hkAtk37.png"
 hkAtk38.src = "./assets/images/hero/Attack3/hkAtk38.png"
 
+var hkEnemyRun1 = new Image();
+var hkEnemyRun2 = new Image();
+var hkEnemyRun3 = new Image();
+var hkEnemyRun4 = new Image();
+var hkEnemyRun5 = new Image();
+var hkEnemyRun6 = new Image();
+var hkEnemyRun7 = new Image();
+var hkEnemyRun8 = new Image();
+var hkEnemyRun9 = new Image();
+var hkEnemyRun10 = new Image();
+
+hkEnemyRun1.src = "./assets/images/barbarian/Run/hkEnemyRun1.png"
+hkEnemyRun2.src = "./assets/images/barbarian/Run/hkEnemyRun2.png"
+hkEnemyRun3.src = "./assets/images/barbarian/Run/hkEnemyRun3.png"
+hkEnemyRun4.src = "./assets/images/barbarian/Run/hkEnemyRun4.png"
+hkEnemyRun5.src = "./assets/images/barbarian/Run/hkEnemyRun5.png"
+hkEnemyRun6.src = "./assets/images/barbarian/Run/hkEnemyRun6.png"
+hkEnemyRun7.src = "./assets/images/barbarian/Run/hkEnemyRun7.png"
+hkEnemyRun8.src = "./assets/images/barbarian/Run/hkEnemyRun8.png"
+hkEnemyRun9.src = "./assets/images/barbarian/Run/hkEnemyRun9.png"
+hkEnemyRun10.src = "./assets/images/barbarian/Run/hkEnemyRun10.png"
+
+var hkEnemyDeath1 = new Image();
+var hkEnemyDeath2 = new Image();
+var hkEnemyDeath3 = new Image();
+var hkEnemyDeath4 = new Image();
+var hkEnemyDeath5 = new Image();
+var hkEnemyDeath6 = new Image();
+var hkEnemyDeath7 = new Image();
+var hkEnemyDeath8 = new Image();
+var hkEnemyDeath9 = new Image();
+var hkEnemyDeath10 = new Image();
+var hkEnemyDeath11 = new Image();
+var hkEnemyDeath12 = new Image();
+
+hkEnemyDeath1.src = "./assets/images/barbarian/Death/hkEnemyDeath1.png"
+hkEnemyDeath2.src = "./assets/images/barbarian/Death/hkEnemyDeath2.png"
+hkEnemyDeath3.src = "./assets/images/barbarian/Death/hkEnemyDeath3.png"
+hkEnemyDeath4.src = "./assets/images/barbarian/Death/hkEnemyDeath4.png"
+hkEnemyDeath5.src = "./assets/images/barbarian/Death/hkEnemyDeath5.png"
+hkEnemyDeath6.src = "./assets/images/barbarian/Death/hkEnemyDeath6.png"
+hkEnemyDeath7.src = "./assets/images/barbarian/Death/hkEnemyDeath7.png"
+hkEnemyDeath8.src = "./assets/images/barbarian/Death/hkEnemyDeath8.png"
+hkEnemyDeath9.src = "./assets/images/barbarian/Death/hkEnemyDeath9.png"
+hkEnemyDeath10.src = "./assets/images/barbarian/Death/hkEnemyDeath10.png"
+hkEnemyDeath11.src = "./assets/images/barbarian/Death/hkEnemyDeath11.png"
+hkEnemyDeath12.src = "./assets/images/barbarian/Death/hkEnemyDeath12.png"
+
+
 
 
 
@@ -86,6 +135,8 @@ hkAtk38.src = "./assets/images/hero/Attack3/hkAtk38.png"
 function startGame() {
     heroChar = new hero(hkIdle1, 3, 27);
     myBackground = new background(bg1, -180, -115);
+    enemyChar = new enemy(hkEnemyRun1, 170, 18)
+    deadEnemies = new deadEnemyList(hkEnemyDeath12)
     swing = new sound("./assets/sfx/swing.wav");
     hit = new sound("./assets/sfx/hit.wav");
     myGameArea.start();
@@ -99,8 +150,7 @@ var myGameArea = {
         this.canvas.height = 90;
         this.context = this.canvas.getContext("2d");
         div.appendChild(this.canvas);
-        //this.div.insertBefore(this.canvas, this.div.childNodes[0]);
-        this.frameNo = 0;
+        this.enemyPresent = false;
         this.interval = setInterval(updateGameArea, 20);
         },
     clear : function() {
@@ -108,6 +158,17 @@ var myGameArea = {
     },
     stop : function() {
         clearInterval(this.interval);
+    },
+    startEnemy: function(){
+        if(this.enemyPresent===false){
+            enemyChar.x = 170;
+            enemyChar.y = 18;
+            enemyChar.speedX = -0.7;
+            this.enemyPresent=true;
+        }
+        if(enemyChar.x<=heroChar.x+12){
+            enemyChar.speedX = 0;
+        }
     }
 }
 
@@ -115,10 +176,21 @@ function background(image, x, y) {
     this.image = image;
     this.x = x;
     this.y = y;
-    this.attackSeq = 1;  
     this.update = function() {
         ctx = myGameArea.context;
         ctx.drawImage(this.image, this.x, this.y) 
+    }
+}
+
+function deadEnemyList(image) {////needs to be an array
+    this.image = image;
+    this.locations = []
+    this.update = function() {
+        ctx = myGameArea.context;
+        this.locations.forEach(location =>{
+            ctx.drawImage(this.image, location[0], location[1]) 
+        })
+        
     }
 }
 
@@ -263,11 +335,120 @@ function hero(image, x, y) {
     }
 }
 
+function enemy(image, x, y) {
+    this.animSpeed = 5;
+    this.frameCount = 0;
+    this.animation = "run"
+    this.image = image;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;
+    this.attackSeq = 1;  
+    this.update = function() {
+        this.frameCount +=1;
+        //animations
+        if(this.animation==="run"){
+            //console.log(this.frameCount)
+            if(this.frameCount>=this.animSpeed*10){
+                this.image=hkEnemyRun1
+                this.frameCount = 0;
+            }
+            else if(this.frameCount>=this.animSpeed*9){
+                this.image=hkEnemyRun10
+            }
+            else if(this.frameCount>=this.animSpeed*8){
+                this.image=hkEnemyRun9
+            }
+            else if(this.frameCount>=this.animSpeed*7){
+                this.image=hkEnemyRun8
+            }
+            else if(this.frameCount>=this.animSpeed*6){
+                this.image=hkEnemyRun7
+            }
+            else if(this.frameCount>=this.animSpeed*5){
+                this.image=hkEnemyRun6
+            }
+            else if(this.frameCount>=this.animSpeed*4){
+                this.image=hkEnemyRun5
+            }
+            else if(this.frameCount>=this.animSpeed*3){
+                this.image=hkEnemyRun4
+            }
+            else if(this.frameCount>=this.animSpeed*2){
+                this.image=hkEnemyRun3
+            }
+            else if(this.frameCount>=this.animSpeed*1){
+                this.image=hkEnemyRun2
+            }
+        }
+        if(this.animation==="death"){
+            if(this.frameCount>=this.animSpeed*12){
+                deadEnemies.locations.push([this.x,this.y]);
+                myGameArea.enemyPresent=false;
+                this.frameCount = 0;
+                this.animation = "run"
+
+            }
+            else if(this.frameCount>=this.animSpeed*11){
+                this.image=hkEnemyDeath12
+            }
+            else if(this.frameCount>=this.animSpeed*10){
+                this.image=hkEnemyDeath11
+            }
+            else if(this.frameCount>=this.animSpeed*9){
+                this.image=hkEnemyDeath10
+            }
+            else if(this.frameCount>=this.animSpeed*8){
+                this.image=hkEnemyDeath9
+            }
+            else if(this.frameCount>=this.animSpeed*7){
+                this.image=hkEnemyDeath8
+            }
+            else if(this.frameCount>=this.animSpeed*6){
+                this.image=hkEnemyDeath7
+            }
+            else if(this.frameCount>=this.animSpeed*5){
+                this.image=hkEnemyDeath6
+            }
+            else if(this.frameCount>=this.animSpeed*4){
+                this.image=hkEnemyDeath5
+            }
+            else if(this.frameCount>=this.animSpeed*3){
+                this.image=hkEnemyDeath4
+            }
+            else if(this.frameCount>=this.animSpeed*2){
+                this.image=hkEnemyDeath3
+            }
+            else if(this.frameCount>=this.animSpeed*1){
+                this.image=hkEnemyDeath2
+            }
+            else{
+                this.image=hkEnemyDeath1
+            }
+        }
+        ctx = myGameArea.context;
+        ctx.drawImage(this.image, this.x, this.y);
+        
+        
+
+
+    }
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;        
+    }
+}
+
 function updateGameArea() {
     myGameArea.clear();  
     myBackground.update();
+    myGameArea.startEnemy();  
+    deadEnemies.update();
     heroChar.newPos();    
     heroChar.update();
+    enemyChar.newPos();    
+    enemyChar.update();
 }
 
 function move(dir) {
@@ -281,6 +462,11 @@ function move(dir) {
 function attack() {
     //heroChar.image.src = "angry.gif";
     heroChar.frameCount = 0;
+    if (enemyChar.x<=heroChar.x+50){
+        enemyChar.speedX = 0;
+        enemyChar.frameCount = 0;
+        enemyChar.animation = "death";
+    }
     swing.play();
     if(heroChar.attackSeq==1) {heroChar.animation = "attack1"; heroChar.attackSeq=2}
     else if(heroChar.attackSeq==2) {heroChar.animation = "attack2"; heroChar.attackSeq=3}
