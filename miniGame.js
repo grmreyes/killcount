@@ -160,6 +160,10 @@ var myGameArea = {
         this.killCount = 0;
         this.muted = false;
         this.interval = setInterval(updateGameArea, 20);
+        let character = movieData[myGameArea.killCount][Math.floor(Math.random() * movieData[myGameArea.killCount].length)];
+        document.querySelector(".char-name").innerHTML = character.name;
+        document.querySelector(".movie-title").innerHTML = character.movie;
+        document.querySelector(".char-image").src = character.imageUrl;
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);

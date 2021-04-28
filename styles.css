@@ -110,5 +110,5 @@ canvas {
   .image-container{
     width: 100%;
     height: calc(30vw * 0.56);
-    background-color: red;
+    background-color: black;
   }
