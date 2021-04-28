@@ -404,7 +404,6 @@ function enemy(image, x, y) {
                 myGameArea.enemyPresent=false;
                 this.frameCount = 0;
                 this.animation = "run"
-
             }
             else if(this.frameCount>=this.animSpeed*11){
                 this.image=hkEnemyDeath12
@@ -412,6 +411,7 @@ function enemy(image, x, y) {
             else if(this.frameCount>=this.animSpeed*10){
                 this.image=hkEnemyDeath11
                 document.querySelector(".title").classList.remove("red")
+                
             }
             else if(this.frameCount>=this.animSpeed*9){
                 this.image=hkEnemyDeath10
@@ -433,6 +433,7 @@ function enemy(image, x, y) {
             }
             else if(this.frameCount>=this.animSpeed*3){
                 this.image=hkEnemyDeath4     
+                
             }
             else if(this.frameCount>=this.animSpeed*2){
                 this.image=hkEnemyDeath3
