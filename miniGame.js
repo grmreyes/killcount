@@ -4,8 +4,8 @@ var myBackground;
 
 //backgrounds
 
-var bg1 = new Image();
-bg1.src = "./assets/images/backgrounds/bg1.jpg"
+var background1 = new Image();
+background1.src = "./assets/images/backgrounds/bg1.jpg"
 
 var seats = new Image();
 seats.src = "./assets/images/backgrounds/seats.png"
@@ -21,14 +21,14 @@ var hkIdle6 = new Image();
 var hkIdle7 = new Image();
 var hkIdle8 = new Image();
 
-hkIdle1.src = "./assets/images/hero/Idle/hkIdle1.png"
-hkIdle2.src = "./assets/images/hero/Idle/hkIdle2.png"
-hkIdle3.src = "./assets/images/hero/Idle/hkIdle3.png"
-hkIdle4.src = "./assets/images/hero/Idle/hkIdle4.png"
-hkIdle5.src = "./assets/images/hero/Idle/hkIdle5.png"
-hkIdle6.src = "./assets/images/hero/Idle/hkIdle6.png"
-hkIdle7.src = "./assets/images/hero/Idle/hkIdle7.png"
-hkIdle8.src = "./assets/images/hero/Idle/hkIdle8.png"
+hkIdle1.src = "./assets/images/fantasy/hero/Idle/hkIdle1.png"
+hkIdle2.src = "./assets/images/fantasy/hero/Idle/hkIdle2.png"
+hkIdle3.src = "./assets/images/fantasy/hero/Idle/hkIdle3.png"
+hkIdle4.src = "./assets/images/fantasy/hero/Idle/hkIdle4.png"
+hkIdle5.src = "./assets/images/fantasy/hero/Idle/hkIdle5.png"
+hkIdle6.src = "./assets/images/fantasy/hero/Idle/hkIdle6.png"
+hkIdle7.src = "./assets/images/fantasy/hero/Idle/hkIdle7.png"
+hkIdle8.src = "./assets/images/fantasy/hero/Idle/hkIdle8.png"
 
 
 var hkAtk11 = new Image();
@@ -38,12 +38,12 @@ var hkAtk14 = new Image();
 var hkAtk15 = new Image();
 var hkAtk16 = new Image();
 
-hkAtk11.src = "./assets/images/hero/Attack1/hkAtk11.png"
-hkAtk12.src = "./assets/images/hero/Attack1/hkAtk12.png"
-hkAtk13.src = "./assets/images/hero/Attack1/hkAtk13.png"
-hkAtk14.src = "./assets/images/hero/Attack1/hkAtk14.png"
-hkAtk15.src = "./assets/images/hero/Attack1/hkAtk15.png"
-hkAtk16.src = "./assets/images/hero/Attack1/hkAtk16.png"
+hkAtk11.src = "./assets/images/fantasy/hero/Attack1/hkAtk11.png"
+hkAtk12.src = "./assets/images/fantasy/hero/Attack1/hkAtk12.png"
+hkAtk13.src = "./assets/images/fantasy/hero/Attack1/hkAtk13.png"
+hkAtk14.src = "./assets/images/fantasy/hero/Attack1/hkAtk14.png"
+hkAtk15.src = "./assets/images/fantasy/hero/Attack1/hkAtk15.png"
+hkAtk16.src = "./assets/images/fantasy/hero/Attack1/hkAtk16.png"
 
 var hkAtk21 = new Image();
 var hkAtk22 = new Image();
@@ -52,12 +52,12 @@ var hkAtk24 = new Image();
 var hkAtk25 = new Image();
 var hkAtk26 = new Image();
 
-hkAtk21.src = "./assets/images/hero/Attack2/hkAtk21.png"
-hkAtk22.src = "./assets/images/hero/Attack2/hkAtk22.png"
-hkAtk23.src = "./assets/images/hero/Attack2/hkAtk23.png"
-hkAtk24.src = "./assets/images/hero/Attack2/hkAtk24.png"
-hkAtk25.src = "./assets/images/hero/Attack2/hkAtk25.png"
-hkAtk26.src = "./assets/images/hero/Attack2/hkAtk26.png"
+hkAtk21.src = "./assets/images/fantasy/hero/Attack2/hkAtk21.png"
+hkAtk22.src = "./assets/images/fantasy/hero/Attack2/hkAtk22.png"
+hkAtk23.src = "./assets/images/fantasy/hero/Attack2/hkAtk23.png"
+hkAtk24.src = "./assets/images/fantasy/hero/Attack2/hkAtk24.png"
+hkAtk25.src = "./assets/images/fantasy/hero/Attack2/hkAtk25.png"
+hkAtk26.src = "./assets/images/fantasy/hero/Attack2/hkAtk26.png"
 
 var hkAtk31 = new Image();
 var hkAtk32 = new Image();
@@ -68,14 +68,14 @@ var hkAtk36 = new Image();
 var hkAtk37 = new Image();
 var hkAtk38 = new Image();
 
-hkAtk31.src = "./assets/images/hero/Attack3/hkAtk31.png"
-hkAtk32.src = "./assets/images/hero/Attack3/hkAtk32.png"
-hkAtk33.src = "./assets/images/hero/Attack3/hkAtk33.png"
-hkAtk34.src = "./assets/images/hero/Attack3/hkAtk34.png"
-hkAtk35.src = "./assets/images/hero/Attack3/hkAtk35.png"
-hkAtk36.src = "./assets/images/hero/Attack3/hkAtk36.png"
-hkAtk37.src = "./assets/images/hero/Attack3/hkAtk37.png"
-hkAtk38.src = "./assets/images/hero/Attack3/hkAtk38.png"
+hkAtk31.src = "./assets/images/fantasy/hero/Attack3/hkAtk31.png"
+hkAtk32.src = "./assets/images/fantasy/hero/Attack3/hkAtk32.png"
+hkAtk33.src = "./assets/images/fantasy/hero/Attack3/hkAtk33.png"
+hkAtk34.src = "./assets/images/fantasy/hero/Attack3/hkAtk34.png"
+hkAtk35.src = "./assets/images/fantasy/hero/Attack3/hkAtk35.png"
+hkAtk36.src = "./assets/images/fantasy/hero/Attack3/hkAtk36.png"
+hkAtk37.src = "./assets/images/fantasy/hero/Attack3/hkAtk37.png"
+hkAtk38.src = "./assets/images/fantasy/hero/Attack3/hkAtk38.png"
 
 var hkEnemyRun1 = new Image();
 var hkEnemyRun2 = new Image();
@@ -88,16 +88,16 @@ var hkEnemyRun8 = new Image();
 var hkEnemyRun9 = new Image();
 var hkEnemyRun10 = new Image();
 
-hkEnemyRun1.src = "./assets/images/barbarian/Run/hkEnemyRun1.png"
-hkEnemyRun2.src = "./assets/images/barbarian/Run/hkEnemyRun2.png"
-hkEnemyRun3.src = "./assets/images/barbarian/Run/hkEnemyRun3.png"
-hkEnemyRun4.src = "./assets/images/barbarian/Run/hkEnemyRun4.png"
-hkEnemyRun5.src = "./assets/images/barbarian/Run/hkEnemyRun5.png"
-hkEnemyRun6.src = "./assets/images/barbarian/Run/hkEnemyRun6.png"
-hkEnemyRun7.src = "./assets/images/barbarian/Run/hkEnemyRun7.png"
-hkEnemyRun8.src = "./assets/images/barbarian/Run/hkEnemyRun8.png"
-hkEnemyRun9.src = "./assets/images/barbarian/Run/hkEnemyRun9.png"
-hkEnemyRun10.src = "./assets/images/barbarian/Run/hkEnemyRun10.png"
+hkEnemyRun1.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun1.png"
+hkEnemyRun2.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun2.png"
+hkEnemyRun3.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun3.png"
+hkEnemyRun4.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun4.png"
+hkEnemyRun5.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun5.png"
+hkEnemyRun6.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun6.png"
+hkEnemyRun7.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun7.png"
+hkEnemyRun8.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun8.png"
+hkEnemyRun9.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun9.png"
+hkEnemyRun10.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun10.png"
 
 var hkEnemyDeath1 = new Image();
 var hkEnemyDeath2 = new Image();
@@ -112,18 +112,18 @@ var hkEnemyDeath10 = new Image();
 var hkEnemyDeath11 = new Image();
 var hkEnemyDeath12 = new Image();
 
-hkEnemyDeath1.src = "./assets/images/barbarian/Death/hkEnemyDeath1.png"
-hkEnemyDeath2.src = "./assets/images/barbarian/Death/hkEnemyDeath2.png"
-hkEnemyDeath3.src = "./assets/images/barbarian/Death/hkEnemyDeath3.png"
-hkEnemyDeath4.src = "./assets/images/barbarian/Death/hkEnemyDeath4.png"
-hkEnemyDeath5.src = "./assets/images/barbarian/Death/hkEnemyDeath5.png"
-hkEnemyDeath6.src = "./assets/images/barbarian/Death/hkEnemyDeath6.png"
-hkEnemyDeath7.src = "./assets/images/barbarian/Death/hkEnemyDeath7.png"
-hkEnemyDeath8.src = "./assets/images/barbarian/Death/hkEnemyDeath8.png"
-hkEnemyDeath9.src = "./assets/images/barbarian/Death/hkEnemyDeath9.png"
-hkEnemyDeath10.src = "./assets/images/barbarian/Death/hkEnemyDeath10.png"
-hkEnemyDeath11.src = "./assets/images/barbarian/Death/hkEnemyDeath11.png"
-hkEnemyDeath12.src = "./assets/images/barbarian/Death/hkEnemyDeath12.png"
+hkEnemyDeath1.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath1.png"
+hkEnemyDeath2.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath2.png"
+hkEnemyDeath3.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath3.png"
+hkEnemyDeath4.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath4.png"
+hkEnemyDeath5.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath5.png"
+hkEnemyDeath6.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath6.png"
+hkEnemyDeath7.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath7.png"
+hkEnemyDeath8.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath8.png"
+hkEnemyDeath9.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath9.png"
+hkEnemyDeath10.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath10.png"
+hkEnemyDeath11.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath11.png"
+hkEnemyDeath12.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath12.png"
 
 
 
@@ -132,8 +132,9 @@ hkEnemyDeath12.src = "./assets/images/barbarian/Death/hkEnemyDeath12.png"
 
 function startGame() {
     heroChar = new hero(hkIdle1, 3, 27);
-    myBackground = new background(bg1, -180, -115);
-    enemyChar = new enemy(hkEnemyRun1, 170, 18)
+    enemyDefY = 18
+    myBackground = new background(background1, -180, -115);
+    enemyChar = new enemy(hkEnemyRun1, 170, enemyDefY)
     deadEnemies = new deadEnemyList(hkEnemyDeath12)
     swing = new sound("./assets/sfx/swing.wav");
     hit = new sound("./assets/sfx/hit.wav");
@@ -159,6 +160,7 @@ var myGameArea = {
         this.enemyPresent = false;
         this.killCount = 0;
         this.muted = false;
+        this.genre = "fantasy"
         this.interval = setInterval(updateGameArea, 20);
         let character = movieData[myGameArea.killCount][Math.floor(Math.random() * movieData[myGameArea.killCount].length)];
         document.querySelector(".char-name").innerHTML = character.name;
@@ -174,7 +176,7 @@ var myGameArea = {
     startEnemy: function(){
         if(this.enemyPresent===false){
             enemyChar.x = 170;
-            enemyChar.y = 18;
+            enemyChar.y = enemyDefY;
             enemyChar.speedX = (Math.random()*-1)-1;
             enemyChar.speedY = 0;
             this.enemyPresent=true;
@@ -195,7 +197,7 @@ function background(image, x, y) {
     }
 }
 
-function deadEnemyList(image) {////needs to be an array
+function deadEnemyList(image) {
     this.image = image;
     this.locations = []
     this.update = function() {
@@ -350,6 +352,7 @@ function hero(image, x, y) {
 }
 
 function enemy(image, x, y) {
+    this.attackDistance = 50;
     this.animSpeed = 5;
     this.frameCount = 0;
     this.animation = "run"
@@ -504,6 +507,7 @@ function addKill(){
 
     //play sounds
     if(myGameArea.muted===false){
+        swing.play();
         hit.play();
         if(Math.random()>0.9){
             die2.play();
@@ -529,7 +533,7 @@ function attack() {
     bg1.play()
     }
     heroChar.frameCount = 0;
-    if (enemyChar.x<=heroChar.x+50){
+    if (enemyChar.x<=heroChar.x+enemyChar.attackDistance){
         addKill();
     }
     else{
@@ -555,14 +559,189 @@ function handleMute(){
     console.log(myGameArea.muted)
 }
 
-function zoomOut() {
-    myGameArea.canvas.width+=2
-    myGameArea.canvas.height+=2
+function sciFi(){ //switch assets to scifi theme
+
+    if(myGameArea.genre!="scifi"){
+
+
+        myGameArea.genre="scifi"
+        //hero
+
+        hkIdle1.src = "./assets/images/scifi/hero/Idle/idle-1.png"
+        hkIdle2.src = "./assets/images/scifi/hero/Idle/idle-2.png"
+        hkIdle3.src = "./assets/images/scifi/hero/Idle/idle-3.png"
+        hkIdle4.src = "./assets/images/scifi/hero/Idle/idle-4.png"
+        hkIdle5.src = "./assets/images/scifi/hero/Idle/idle-5.png"
+        hkIdle6.src = "./assets/images/scifi/hero/Idle/idle-6.png"
+        hkIdle7.src = "./assets/images/scifi/hero/Idle/idle-7.png"
+        hkIdle8.src = "./assets/images/scifi/hero/Idle/idle-8.png"
+
+        hkAtk11.src = "./assets/images/scifi/hero/Attack1/shoot1.png"
+        hkAtk12.src = "./assets/images/scifi/hero/Attack1/shoot2.png"
+        hkAtk13.src = "./assets/images/scifi/hero/Attack1/shoot3.png"
+        hkAtk14.src = "./assets/images/scifi/hero/Attack1/shoot4.png"
+        hkAtk15.src = "./assets/images/scifi/hero/Attack1/shoot5.png"
+        hkAtk16.src = "./assets/images/scifi/hero/Attack1/shoot6.png"
+
+        hkAtk21.src = "./assets/images/scifi/hero/Attack1/shoot1.png"
+        hkAtk22.src = "./assets/images/scifi/hero/Attack1/shoot2.png"
+        hkAtk23.src = "./assets/images/scifi/hero/Attack1/shoot3.png"
+        hkAtk24.src = "./assets/images/scifi/hero/Attack1/shoot4.png"
+        hkAtk25.src = "./assets/images/scifi/hero/Attack1/shoot5.png"
+        hkAtk26.src = "./assets/images/scifi/hero/Attack1/shoot6.png"
+
+        hkAtk31.src = "./assets/images/scifi/hero/Attack3/shoot1.png"
+        hkAtk32.src = "./assets/images/scifi/hero/Attack3/shoot2.png"
+        hkAtk33.src = "./assets/images/scifi/hero/Attack3/shoot3.png"
+        hkAtk34.src = "./assets/images/scifi/hero/Attack3/shoot4.png"
+        hkAtk35.src = "./assets/images/scifi/hero/Attack3/shoot5.png"
+        hkAtk36.src = "./assets/images/scifi/hero/Attack3/shoot6.png"
+        hkAtk37.src = "./assets/images/scifi/hero/Attack3/shoot7.png"
+        hkAtk38.src = "./assets/images/scifi/hero/Attack3/shoot8.png"
+
+        //enemy
+
+        hkEnemyRun1.src = "./assets/images/scifi/enemy/Run/sfrun1.png"
+        hkEnemyRun2.src = "./assets/images/scifi/enemy/Run/sfrun2.png"
+        hkEnemyRun3.src = "./assets/images/scifi/enemy/Run/sfrun3.png"
+        hkEnemyRun4.src = "./assets/images/scifi/enemy/Run/sfrun4.png"
+        hkEnemyRun5.src = "./assets/images/scifi/enemy/Run/sfrun5.png"
+        hkEnemyRun6.src = "./assets/images/scifi/enemy/Run/sfrun6.png"
+        hkEnemyRun7.src = "./assets/images/scifi/enemy/Run/sfrun7.png"
+        hkEnemyRun8.src = "./assets/images/scifi/enemy/Run/sfrun8.png"
+        hkEnemyRun9.src = "./assets/images/scifi/enemy/Run/sfrun9.png"
+        hkEnemyRun10.src = "./assets/images/scifi/enemy/Run/sfrun10.png"
+
+        hkEnemyDeath1.src = "./assets/images/scifi/enemy/Die/sfdie1.png"
+        hkEnemyDeath2.src = "./assets/images/scifi/enemy/Die/sfdie2.png"
+        hkEnemyDeath3.src = "./assets/images/scifi/enemy/Die/sfdie3.png"
+        hkEnemyDeath4.src = "./assets/images/scifi/enemy/Die/sfdie4.png"
+        hkEnemyDeath5.src = "./assets/images/scifi/enemy/Die/sfdie5.png"
+        hkEnemyDeath6.src = "./assets/images/scifi/enemy/Die/sfdie6.png"
+        hkEnemyDeath7.src = "./assets/images/scifi/enemy/Die/sfdie7.png"
+        hkEnemyDeath8.src = "./assets/images/scifi/enemy/Die/sfdie8.png"
+        hkEnemyDeath9.src = "./assets/images/scifi/enemy/Die/sfdie9.png"
+        hkEnemyDeath10.src = "./assets/images/scifi/enemy/Die/sfdie10.png"
+        hkEnemyDeath11.src = "./assets/images/scifi/enemy/Die/sfdie11.png"
+        hkEnemyDeath12.src = "./assets/images/scifi/enemy/Die/sfdie12.png"
+
+        enemyDefY = -5;
+        enemyChar.y -= 23;
+        enemyChar.attackDistance = 38;
+
+        deadEnemies.locations.forEach(location =>{
+            location[1]-= 23;
+        })
+
+        //bg
+
+        background1.src = "./assets/images/backgrounds/bg2.jpg"
+        myBackground.x = -140;
+        myBackground.y = -125;
+
+        //sounds
+
+        swing.sound.src = "./assets/sfx/zap.ogg"
+        hit.sound.src = "./assets/sfx/zaphit.wav"
+        bg1.sound.src = "./assets/music/bg2.ogg"
+        bg1.play();
+    }
+
+
 }
 
-function zoomIn() {
-    myGameArea.canvas.width-=2
-    myGameArea.canvas.height-=2
+function fantasy(){ //switch assets to fantasy theme
+
+    if(myGameArea.genre!="fantasy"){
+
+
+        myGameArea.genre="fantasy"
+        //hero
+
+        hkIdle1.src = "./assets/images/fantasy/hero/Idle/hkIdle1.png"
+        hkIdle2.src = "./assets/images/fantasy/hero/Idle/hkIdle2.png"
+        hkIdle3.src = "./assets/images/fantasy/hero/Idle/hkIdle3.png"
+        hkIdle4.src = "./assets/images/fantasy/hero/Idle/hkIdle4.png"
+        hkIdle5.src = "./assets/images/fantasy/hero/Idle/hkIdle5.png"
+        hkIdle6.src = "./assets/images/fantasy/hero/Idle/hkIdle6.png"
+        hkIdle7.src = "./assets/images/fantasy/hero/Idle/hkIdle7.png"
+        hkIdle8.src = "./assets/images/fantasy/hero/Idle/hkIdle8.png"
+
+        hkAtk11.src = "./assets/images/fantasy/hero/Attack1/hkAtk11.png"
+        hkAtk12.src = "./assets/images/fantasy/hero/Attack1/hkAtk12.png"
+        hkAtk13.src = "./assets/images/fantasy/hero/Attack1/hkAtk13.png"
+        hkAtk14.src = "./assets/images/fantasy/hero/Attack1/hkAtk14.png"
+        hkAtk15.src = "./assets/images/fantasy/hero/Attack1/hkAtk15.png"
+        hkAtk16.src = "./assets/images/fantasy/hero/Attack1/hkAtk16.png"
+
+        hkAtk21.src = "./assets/images/fantasy/hero/Attack2/hkAtk21.png"
+        hkAtk22.src = "./assets/images/fantasy/hero/Attack2/hkAtk22.png"
+        hkAtk23.src = "./assets/images/fantasy/hero/Attack2/hkAtk23.png"
+        hkAtk24.src = "./assets/images/fantasy/hero/Attack2/hkAtk24.png"
+        hkAtk25.src = "./assets/images/fantasy/hero/Attack2/hkAtk25.png"
+        hkAtk26.src = "./assets/images/fantasy/hero/Attack2/hkAtk26.png"
+
+        hkAtk31.src = "./assets/images/fantasy/hero/Attack3/hkAtk31.png"
+        hkAtk32.src = "./assets/images/fantasy/hero/Attack3/hkAtk32.png"
+        hkAtk33.src = "./assets/images/fantasy/hero/Attack3/hkAtk33.png"
+        hkAtk34.src = "./assets/images/fantasy/hero/Attack3/hkAtk34.png"
+        hkAtk35.src = "./assets/images/fantasy/hero/Attack3/hkAtk35.png"
+        hkAtk36.src = "./assets/images/fantasy/hero/Attack3/hkAtk36.png"
+        hkAtk37.src = "./assets/images/fantasy/hero/Attack3/hkAtk37.png"
+        hkAtk38.src = "./assets/images/fantasy/hero/Attack3/hkAtk38.png"
+
+        //enemy
+
+        hkEnemyRun1.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun1.png"
+        hkEnemyRun2.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun2.png"
+        hkEnemyRun3.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun3.png"
+        hkEnemyRun4.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun4.png"
+        hkEnemyRun5.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun5.png"
+        hkEnemyRun6.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun6.png"
+        hkEnemyRun7.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun7.png"
+        hkEnemyRun8.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun8.png"
+        hkEnemyRun9.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun9.png"
+        hkEnemyRun10.src = "./assets/images/fantasy/barbarian/Run/hkEnemyRun10.png"
+
+        hkEnemyDeath1.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath1.png"
+        hkEnemyDeath2.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath2.png"
+        hkEnemyDeath3.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath3.png"
+        hkEnemyDeath4.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath4.png"
+        hkEnemyDeath5.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath5.png"
+        hkEnemyDeath6.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath6.png"
+        hkEnemyDeath7.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath7.png"
+        hkEnemyDeath8.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath8.png"
+        hkEnemyDeath9.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath9.png"
+        hkEnemyDeath10.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath10.png"
+        hkEnemyDeath11.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath11.png"
+        hkEnemyDeath12.src = "./assets/images/fantasy/barbarian/Death/hkEnemyDeath12.png"
+
+
+        //offset enemy
+
+        enemyDefY = 18;
+        enemyChar.y += 23;
+        enemyChar.attackDistance = 50;
+
+        deadEnemies.locations.forEach(location =>{
+            location[1]+= 23;
+        })
+
+        //bg
+
+        background1.src = "./assets/images/backgrounds/bg1.jpg"
+        myBackground.x = -180;
+        myBackground.y = -115;
+
+        //sounds
+
+        swing.sound.src = "./assets/sfx/swing.wav"
+        hit.sound.src = "./assets/sfx/hit.wav"
+        bg1.sound.src = "./assets/music/bg1.ogg"
+        bg1.play();
+    }
+
+
 }
 
 
