@@ -1,4 +1,3 @@
-var myGamePiece;
 var myBackground;
 
 //images
@@ -470,42 +469,63 @@ function updateGameArea() {
 }
 
 function move(dir) {
-    //heroChar.image.src = "angry.gif";
     if (dir == "up") {heroChar.speedY = -1; }
     if (dir == "down") {heroChar.speedY = 1; }
     if (dir == "left") {heroChar.speedX = -1; }
     if (dir == "right") {heroChar.speedX = 1; }
 }
 
+
+
+function addKill(){
+
+    //add dead body, reset enemy
+    enemyChar.speedX = 0;
+    if(enemyChar.animation!="death"){
+        enemyChar.frameCount = 0;
+        myGameArea.killCount+=1
+        document.querySelector(".title").classList.add("red")
+        document.querySelector(".count-num").innerHTML = myGameArea.killCount;
+
+        //get char
+        if(movieData[myGameArea.killCount]){
+            let character = movieData[myGameArea.killCount][Math.floor(Math.random() * movieData[myGameArea.killCount].length)];
+            document.querySelector(".char-name").innerHTML = character.name;
+            document.querySelector(".movie-title").innerHTML = character.movie;
+            document.querySelector(".char-image").src = character.imageUrl;
+        }
+    }
+    enemyChar.animation = "death";
+
+    //play sounds
+    if(myGameArea.muted===false){
+        hit.play();
+        if(Math.random()>0.9){
+            die2.play();
+        }
+        else{
+            die1.play();
+        }
+    }
+
+
+
+    
+
+    //generate new enemy with random speed
+    enemyChar.speedX = Math.random()*0.2;
+    enemyChar.speedY = Math.random()*0.1;
+    enemyChar.speedY += Math.random()*(-0.1);
+}
+
+
 function attack() {
     if(bg1.sound.paused){
     bg1.play()
     }
-    //heroChar.image.src = "angry.gif";
     heroChar.frameCount = 0;
     if (enemyChar.x<=heroChar.x+50){
-        enemyChar.speedX = 0;
-        if(enemyChar.animation!="death"){
-            enemyChar.frameCount = 0;
-            myGameArea.killCount+=1
-            document.querySelector(".title").classList.add("red")
-            document.querySelector(".count-num").innerHTML = myGameArea.killCount;
-        }
-        enemyChar.animation = "death";
-
-        if(myGameArea.muted===false){
-            hit.play();
-            if(Math.random()>0.9){
-                die2.play();
-            }
-            else{
-                die1.play();
-            }
-        }
-        
-        enemyChar.speedX = Math.random()*0.2;
-        enemyChar.speedY = Math.random()*0.1;
-        enemyChar.speedY += Math.random()*(-0.1);
+        addKill();
     }
     else{
         if(myGameArea.muted===false){
@@ -531,13 +551,11 @@ function handleMute(){
 }
 
 function zoomOut() {
-    //heroChar.image.src = "angry.gif";
     myGameArea.canvas.width+=2
     myGameArea.canvas.height+=2
 }
 
 function zoomIn() {
-    //heroChar.image.src = "angry.gif";
     myGameArea.canvas.width-=2
     myGameArea.canvas.height-=2
 }
@@ -545,7 +563,6 @@ function zoomIn() {
 
 
 function clearmove() {
-    //heroChar.image.src = "smiley.gif";
     heroChar.speedX = 0; 
     heroChar.speedY = 0; 
 }
