@@ -26,13 +26,11 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: black;
+  height: 60%;
 }
 
 .count-container {
-  width: 30%;
-}
-
-.movie-info-container {
   width: 30%;
 }
 
@@ -53,36 +51,26 @@ canvas {
           align-items: center;
   color: white;
   width: 100%;
-  margin: 0;
   font-family: 'Oswald', sans-serif;
+  background-color: black;
 }
 
 .seats {
-  width: 80%;
+  display: fixed;
+  bottom: 0%;
+  width: 100%;
   height: auto;
 }
 
 body {
   background-color: black;
   position: fixed;
+  width: 100%;
 }
 
-.title-container {
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: black;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
 
 .title {
-  font-size: 6vw;
+  font-size: 6.5vw;
   display: inline-block;
   background: black;
   -webkit-transform: skew(-10deg) rotate(-10deg);
@@ -99,7 +87,7 @@ body {
 .count-num {
   position: relative;
   text-align: center;
-  font-size: 8vw;
+  font-size: 10vw;
   display: inline-block;
   background: black;
   -webkit-transform: skew(-10deg) rotate(-10deg);
@@ -124,16 +112,63 @@ body {
 
 .char-image {
   position: relative;
-  max-height: 100%;
-  max-height: 100%;
+  max-height: 90%;
+  max-height: 90%;
   width: auto;
   height: auto;
   overflow: hidden;
+  transition: all 1s;
 }
 
 .image-container {
-  width: 100%;
+  position: absolute;
+  top: 12%;
+  width: 90%;
+  height: 90%;
   height: calc(30vw * 0.56);
   background-color: black;
+  margin-left: 40px;
+  -webkit-transform: skew(10deg) rotate(10deg);
+  transform: skew(10deg) rotate(10deg);
+  z-index: 1;
+}
+
+.movie-info-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.char-name {
+  font-size: 2.3vw;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transform: skew(10deg) rotate(10deg);
+  transform: skew(10deg) rotate(10deg);
+  padding: 5px 5px;
+  margin-left: 30px;
+  margin-top: 37px;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.movie-title {
+  position: relative;
+  text-align: left;
+  font-size: 1vw;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transform: skew(10deg) rotate(10deg);
+  transform: skew(10deg) rotate(10deg);
+  margin-top: 2px;
+  margin-left: 40px;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 2;
 }
 
