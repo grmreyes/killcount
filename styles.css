@@ -146,6 +146,9 @@ body {
   overflow: hidden;
   -webkit-transform: skew(10deg) rotate(10deg);
   transform: skew(10deg) rotate(10deg);
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 .movie-info-container {
