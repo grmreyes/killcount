@@ -17,12 +17,12 @@ canvas {
 }
 
 .screen {
-  width: 40%;
+  width: 30%;
   z-index: 3
 }
 
 .main-container {
-  margin-top: 40px;
+  margin-top: 5%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,7 +32,7 @@ canvas {
 }
 
 .count-container {
-  width: 30%;
+  width: 35%;
 }
 
 .container {
@@ -59,7 +59,7 @@ canvas {
 .seats {
   display: fixed;
   bottom: 0%;
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
@@ -71,14 +71,14 @@ body {
 
 
 .title {
-  font-size: 6.5vw;
+  font-size: 7.5vw;
   display: inline-block;
   background: black;
   -webkit-transform: skew(-10deg) rotate(-10deg);
   transform: skew(-10deg) rotate(-10deg);
   padding: 12px 5px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 4%;
   text-transform: uppercase;
   font-weight: 300;
   -webkit-transition: all 0.3s;
@@ -118,6 +118,21 @@ body {
 
 /* char info */
 
+.onscreen-title {
+  font-size: 1vw;
+  display: inline-block;
+  background: black;
+  -webkit-transform: skew(10deg) rotate(10deg);
+  transform: skew(10deg) rotate(10deg);
+  margin-left: 8%;
+  margin-top: 2%;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
 .char-image {
   position: relative;
   max-width: 100%;
@@ -137,24 +152,25 @@ body {
 
 .image-container {
   position: relative;
-  top: 12%;
+  top: 0;
   width: 90%;
   /* height: 90%; */
-  height: calc(27vw * 0.56);
+  height: calc(32vw * 0.56);
   background-color: black;
   margin-left: 40px;
   overflow: hidden;
   -webkit-transform: skew(10deg) rotate(10deg);
   transform: skew(10deg) rotate(10deg);
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
 }
 
 .movie-info-container {
-  width: 30%;
+  width: 35%;
   display: flex;
   flex-direction: column;
+  margin-top: 1%;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 .char-name{
@@ -194,7 +210,7 @@ body {
   height: 40%;
   top: -105%;
   font-size: 1vw;
-  background: rgba(255, 82, 82, 0.432);
+  background: rgba(220, 20, 60, 0.438);
   /* -webkit-transform: skew(10deg) rotate(10deg);
   transform: skew(10deg) rotate(10deg); */
   text-transform: uppercase;

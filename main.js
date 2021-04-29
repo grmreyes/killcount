@@ -177,7 +177,7 @@ var myGameArea = {
         if(this.enemyPresent===false){
             enemyChar.x = 170;
             enemyChar.y = enemyDefY;
-            enemyChar.speedX = (Math.random()*-1)-1;
+            enemyChar.speedX = (Math.random()*-2)-2;
             enemyChar.speedY = 0;
             this.enemyPresent=true;
         }
@@ -506,6 +506,11 @@ function addKill(){
             document.querySelector(".char-image").classList.remove("invisible")
             document.querySelector(".char-image").src = character.imageUrl;
             
+            fadeIn();
+        }
+        else{
+            document.querySelector(".char-name").innerHTML = "NOBODY";
+            document.querySelector(".movie-title").innerHTML = "on record with this kill count";
             fadeIn();
         }
 
