@@ -494,14 +494,24 @@ function addKill(){
         myGameArea.killCount+=1
         document.querySelector(".title").classList.add("red")
         document.querySelector(".count-num").innerHTML = myGameArea.killCount;
+        document.querySelector(".char-image").classList.add("invisible")
+        fadeOut();
+        setTimeout(function(){
 
         //get char
         if(movieData[myGameArea.killCount]){
             let character = movieData[myGameArea.killCount][Math.floor(Math.random() * movieData[myGameArea.killCount].length)];
             document.querySelector(".char-name").innerHTML = character.name;
             document.querySelector(".movie-title").innerHTML = character.movie;
+            document.querySelector(".char-image").classList.remove("invisible")
             document.querySelector(".char-image").src = character.imageUrl;
+            
+            fadeIn();
         }
+
+
+         }, 300);
+
     }
     enemyChar.animation = "death";
 
@@ -557,6 +567,20 @@ function handleMute(){
         myGameArea.muted = false;
     }
     console.log(myGameArea.muted)
+}
+
+function fadeOut(){
+    document.querySelector(".char-name-container").classList.remove("fadeInLeft")
+    document.querySelector(".char-name-container").classList.add("fadeOutLeft")
+    document.querySelector(".movie-title-container").classList.remove("fadeInRight")
+    document.querySelector(".movie-title-container").classList.add("fadeOutRight")
+}
+
+function fadeIn(){
+    document.querySelector(".char-name-container").classList.add("fadeInLeft")
+    document.querySelector(".char-name-container").classList.remove("fadeOutLeft")
+    document.querySelector(".movie-title-container").classList.add("fadeInRight")
+    document.querySelector(".movie-title-container").classList.remove("fadeOutRight")
 }
 
 function sciFi(){ //switch assets to scifi theme

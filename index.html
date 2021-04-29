@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
     <title>Killcount</title>
     <script type="application/javascript" src="./seed.js"></script>
-    <script type="application/javascript" src="./miniGame.js"></script>
+    <script type="application/javascript" src="./main.js"></script>
 </head>
 
 <body>
@@ -23,10 +23,10 @@
         </div>
         <div class = "screen" id="screen"></div>
         <div class = "movie-info-container">
-            <h1 class="char-name">Char Name</h1>
-            <h2 class="movie-title">Movie Title</h2>
-            <div class = "image-container">
+            <div class = "image-container" onmouseenter="fadeOut()" onmouseleave="fadeIn()">
                 <img class = "char-image" />
+                <div class="char-name-container fadeInLeft"><h1 class="char-name">Char Name</h1></div>
+                <div class="movie-title-container fadeInRight"><h1 class="movie-title">Movie Title</h1></div>
             </div>
         </div>
     </div>
