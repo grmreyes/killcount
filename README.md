@@ -28,6 +28,6 @@ Features
 
 Contact
 ======
-[grmreyes@gmail.com](mailto:grmreyes@gmail.com)
+[grmreyes@gmail.com](mailto:grmreyes@gmail.com)  
 [Linkedin](https://www.linkedin.com/in/grmreyes/)
 
