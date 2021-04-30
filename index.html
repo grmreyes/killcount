@@ -15,21 +15,28 @@
 <body>
 
     
-    <!-- <div class="splash">
-
-
-    </div> -->
+    <div class="splash-up">
+        <p class="splash-message">
+            An interactive record of how many <strong>kills</strong> movie and TV characters have tallied.
+        </p>
+    </div>
+    <div class="splash-down">
+        <p class="splash-message">
+            <strong>Instructions:</strong><br>Kill a bunch of guys, see which character had as many as you.
+            <h1 class = "splash-button" onClick="endSplash()" ontouchstart="endSplash()">START</h1>
+        </p>
+    </div>
     <div class="container">
 
         <div class="main-container">
             <div class = "count-container">
-                <h1 class="title">KILL<span>COUNT</span></h1>
+                <h1 class="title red">KILL<span>COUNT</span></h1>
                 <h2 class="count-num">0</h2>
             </div>
             <div class = "screen" id="screen">
                 <div class = "genre-container">
-                    <button class = "genre-button" id="sf-button" onClick="sciFi()" ontouchstart="sciFi()">SCI-FI</button><br><br>
-                    <button class = "genre-button genre-selected" id="fantasy-button" onClick="fantasy()" ontouchstart="fantasy()">FANTASY</button><br><br>
+                    <button class = "genre-button genre-selected" id="fantasy-button" onClick="fantasy()" ontouchstart="fantasy()">FANTASY</button>
+                    <button class = "genre-button" id="sf-button" onClick="sciFi()" ontouchstart="sciFi()">SCI-FI</button>
                 </div>
                 <div class="muteButton">
                     <strong onClick="handleMute()" class="material-icons">
@@ -38,7 +45,7 @@
                 </div>
             </div>
             <div class = "movie-info-container">
-                <h1 class="onscreen-title">WHICH IS AS MANY ONSCREEN KILLS AS...</h1>
+                <h1 class="onscreen-title">AS MANY ONSCREEN KILLS AS...</h1>
                 <div class = "image-container" onmouseenter="fadeOut()" onmouseleave="fadeIn()">
                     <img class = "char-image" />
                     <div class="char-name-container fadeInLeft"><h1 class="char-name">Char Name</h1></div>
@@ -47,8 +54,8 @@
             </div>
         </div>
         <div class = "buttons">
-            <h1 class = "kill-button" onClick="attack()" ontouchstart="attack()">KILL!</h1><br><br>
-            <h1 class = "restart-button" onClick="restart()" ontouchstart="restart()">restart</h1><br><br>
+            <h1 class = "kill-button" onClick="attack()" ontouchstart="attack()">KILL!</h1>
+            <h1 class = "restart-button" onClick="restart()" ontouchstart="restart()">restart</h1>
         </div>
         <img class = "seats" src = "./assets/images/backgrounds/seatsShadow.png" />
     </div>
@@ -62,8 +69,8 @@
         </a>
     </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     startGame();
-</script>
+</script> -->
 </body>
 </html>

@@ -35,15 +35,78 @@ canvas {
   width: 35%;
 }
 
-.splash{
+.splash-up{
   width: 100%;
-  height: 100%;
+  height: 50%;
   position: fixed;
-  background-color: crimson;
+  background-color: black;
   top:0px;
   left:0px;
   z-index: 4;
 }
+
+.splash-down{
+  width: 100%;
+  height: 50%;
+  position: fixed;
+  background-color: black;
+  top:50%;
+  left:0px;
+  z-index: 4;
+}
+
+.splash-message{
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  color: white;
+  font-size: 2.5vw;
+  width: 100%;
+  top: 80%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.splash-down .splash-message{
+  top: 10%;
+}
+
+.splash-message strong{
+  color:crimson;
+}
+
+.splash-button{
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  font-size: 2vw;
+  display: flex;
+  text-align: center;
+  background: white;
+  color: black;
+  /* padding: 12px 15px; */
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 3;
+  width: 7vw;
+  height: 3.5vw;
+  align-items: center;
+  justify-content: center;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.splash-button:hover{
+  background-color: crimson;
+  cursor: pointer;
+}
+
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,6 +133,9 @@ canvas {
   bottom: 0%;
   width: 80%;
   height: auto;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 body {
@@ -323,8 +389,8 @@ body {
     }
   100%{
       opacity:0;
-      -webkit-transform:translateX(-200);
-      transform:translateX(-200);
+      -webkit-transform:translateX(-400px);
+      transform:translateX(-400px);
   }
 }
 @keyframes fadeOutLeft{
@@ -360,8 +426,8 @@ body {
     }
   100%{
       opacity:0;
-      -webkit-transform:translateX(200);
-      transform:translateX(200);
+      -webkit-transform:translateX(400px);
+      transform:translateX(400px);
   }
 }
 @keyframes fadeOutRight{
@@ -388,6 +454,82 @@ body {
 }
 
 
+/*splash cut*/
+/* left */
+
+@-webkit-keyframes splashLeft{
+  0%{
+      opacity:1;
+      -webkit-transform:translateX(0px);
+      transform:translateX(0px);
+    }
+  100%{
+      opacity:1;
+      -webkit-transform:translateX(-4000);
+      transform:translateX(-4000);
+  }
+}
+@keyframes splashLeft{
+  0%{
+      opacity:1;
+      -webkit-transform:translateX(0px);
+      -ms-transform:translateX(0px);
+      transform:translateX(0px);}
+  100%{
+      opacity:1;
+      -webkit-transform:translateX(-4000px);
+      -ms-transform:translateX(-4000px);
+      transform:translateX(-4000px);
+  }
+}
+
+.splashLeft{
+  -webkit-animation-name:splashLeft;
+  animation-name:splashLeft;
+  -webkit-animation-duration:1s;
+  animation-duration:1s;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+
+/* right */
+
+@-webkit-keyframes splashRight{
+  0%{
+      opacity:1;
+      -webkit-transform:translateX(0px);
+      transform:translateX(0px);
+    }
+  100%{
+      opacity:1;
+      -webkit-transform:translateX(4000);
+      transform:translateX(4000);
+  }
+}
+@keyframes splashRight{
+  0%{
+      opacity:1;
+      -webkit-transform:translateX(0px);
+      -ms-transform:translateX(0px);
+      transform:translateX(0px);}
+  100%{
+      opacity:1;
+      -webkit-transform:translateX(4000px);
+      -ms-transform:translateX(4000px);
+      transform:translateX(4000px);
+  }
+}
+
+.splashRight{
+  -webkit-animation-name:splashRight;
+  animation-name:splashRight;
+  -webkit-animation-duration:1s;
+  animation-duration:1s;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+
+
 
 /* buttons */
 
@@ -395,7 +537,10 @@ body {
   position: relative;
   top: 70%;
   left: 90%;
-  color:crimson
+  color:crimson;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 
@@ -412,7 +557,7 @@ body {
 
 .genre-container{
   position: absolute;
-  top: 7%;
+  top: 6.9%;
   left: 35%;
   color:crimson;
   display: flex;
@@ -497,7 +642,7 @@ body {
   background: rgb(255, 255, 255);
   color: black;
   /* padding: 12px 15px; */
-  margin-top: 10%;
+  margin-top: 20%;
   left: 36%;
   text-transform: uppercase;
   font-weight: 300;

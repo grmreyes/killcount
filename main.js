@@ -144,9 +144,6 @@ function startGame() {
     bg1.sound.volume = 0.14;
     bg1.sound.setAttribute("loop", "true");
     myGameArea.start();
-
-
-
 }
 
 var myGameArea = {
@@ -561,9 +558,6 @@ function addKill(){
 
 
 function attack() {
-    if(bg1.sound.paused){
-    bg1.play()
-    }
     document.querySelector(".kill-button").classList.add("red-button");
     setTimeout(function(){document.querySelector(".kill-button").classList.remove("red-button");},100);
     heroChar.frameCount = 0;
@@ -600,6 +594,17 @@ function fadeOut(){
     document.querySelector(".char-name-container").classList.add("fadeOutLeft")
     document.querySelector(".movie-title-container").classList.remove("fadeInRight")
     document.querySelector(".movie-title-container").classList.add("fadeOutRight")
+}
+
+function endSplash(){
+    document.querySelector(".splash-up").classList.add("splashLeft");
+    document.querySelector(".splash-down").classList.add("splashRight");
+    startGame();
+    document.querySelector(".title").classList.remove("red")
+    swing.play();
+    if(bg1.sound.paused){
+        bg1.play()
+    }
 }
 
 function fadeIn(){
