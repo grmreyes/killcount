@@ -483,7 +483,25 @@ function move(dir) {
     if (dir == "right") {heroChar.speedX = 1; }
 }
 
+function restart(){
+    deadEnemies.locations = [];
+    myGameArea.killCount = 0;
+    document.querySelector(".count-num").innerHTML = myGameArea.killCount;
+        document.querySelector(".char-image").classList.add("invisible")
+        fadeOut();
+        setTimeout(function(){
+        if(movieData[myGameArea.killCount]){
+            let character = movieData[myGameArea.killCount][Math.floor(Math.random() * movieData[myGameArea.killCount].length)];
+            document.querySelector(".char-name").innerHTML = character.name;
+            document.querySelector(".movie-title").innerHTML = character.movie;
+            document.querySelector(".char-image").classList.remove("invisible")
+            document.querySelector(".char-image").src = character.imageUrl;
+            
+            fadeIn();
+        }
+         }, 300);
 
+}
 
 function addKill(){
 
@@ -497,7 +515,6 @@ function addKill(){
         document.querySelector(".char-image").classList.add("invisible")
         fadeOut();
         setTimeout(function(){
-
         //get char
         if(movieData[myGameArea.killCount]){
             let character = movieData[myGameArea.killCount][Math.floor(Math.random() * movieData[myGameArea.killCount].length)];
@@ -547,6 +564,8 @@ function attack() {
     if(bg1.sound.paused){
     bg1.play()
     }
+    document.querySelector(".kill-button").classList.add("red-button");
+    setTimeout(function(){document.querySelector(".kill-button").classList.remove("red-button");},100);
     heroChar.frameCount = 0;
     if (enemyChar.x<=heroChar.x+enemyChar.attackDistance){
         addKill();
@@ -566,10 +585,12 @@ function handleMute(){
     if(myGameArea.muted===false){
         bg1.sound.muted = true;
         myGameArea.muted = true;
+        document.querySelector(".muteButton .material-icons").innerHTML = "volume_off";
     }
     else{
         bg1.sound.muted = false;
         myGameArea.muted = false;
+        document.querySelector(".muteButton .material-icons").innerHTML = "volume_up";
     }
     console.log(myGameArea.muted)
 }
@@ -594,6 +615,8 @@ function sciFi(){ //switch assets to scifi theme
 
 
         myGameArea.genre="scifi"
+        document.querySelector("#sf-button").classList.add("genre-selected");
+        document.querySelector("#fantasy-button").classList.remove("genre-selected");
         //hero
 
         hkIdle1.src = "./assets/images/scifi/hero/Idle/idle-1.png"
@@ -685,6 +708,8 @@ function fantasy(){ //switch assets to fantasy theme
 
 
         myGameArea.genre="fantasy"
+        document.querySelector("#sf-button").classList.remove("genre-selected");
+        document.querySelector("#fantasy-button").classList.add("genre-selected");
         //hero
 
         hkIdle1.src = "./assets/images/fantasy/hero/Idle/hkIdle1.png"

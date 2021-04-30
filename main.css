@@ -78,7 +78,6 @@ body {
   width: 100%;
 }
 
-
 .title {
   position: relative;
   z-index: 5;
@@ -110,6 +109,10 @@ body {
   font-weight: 300;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.count-large{
+  font-size: 13vw;
 }
 
 .red{
@@ -384,3 +387,128 @@ body {
   animation-fill-mode:both;
 }
 
+
+
+/* buttons */
+
+.muteButton{
+  position: relative;
+  top: 70%;
+  left: 90%;
+  color:crimson
+}
+
+
+
+.muteButton:hover{
+  color:rgb(218, 73, 102);
+  cursor: pointer;
+}
+
+.muteButton .material-icons{
+  position: absolute;
+  font-size: 2vw;
+}
+
+.genre-container{
+  position: absolute;
+  top: 7%;
+  left: 35%;
+  color:crimson;
+  display: flex;
+}
+
+.genre-button{
+  font-size: 1vw;
+  text-align: center;
+  display: flex;
+  background: rgb(255, 255, 255);
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 3;
+  width: 4vw;
+  height: 2vw;
+  align-items: center;
+  justify-content: center;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  border: none;
+  opacity: 0.5;
+}
+
+.genre-button:hover{
+  cursor: pointer;
+  opacity:1;
+}
+
+.genre-button.genre-selected{
+  background-color: crimson;
+}
+
+
+.kill-button{
+  position: relative;
+  font-size: 5vw;
+  display: flex;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  color: black;
+  /* padding: 12px 15px; */
+  margin-top: -22%;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 3;
+  width: 13vw;
+  height: 6.5vw;
+  align-items: center;
+  justify-content: center;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.red-button{
+  font-size: 6vw;
+}
+
+.kill-button:hover{
+  cursor: pointer;
+  background-color: crimson;
+}
+
+.restart-button:hover{
+  cursor: pointer;
+  background-color: crimson;
+}
+
+
+.restart-button{
+  position: relative;
+  font-size: 1vw;
+  display: flex;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  color: black;
+  /* padding: 12px 15px; */
+  margin-top: 10%;
+  left: 36%;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 3;
+  width: 4vw;
+  height: 2vw;
+  align-items: center;
+  justify-content: center;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}

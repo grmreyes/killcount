@@ -3,7 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css_reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
     <title>Killcount</title>
     <script type="application/javascript" src="./seed.js"></script>
@@ -19,32 +21,46 @@
     </div> -->
     <div class="container">
 
-    <div class="main-container">
-        <div class = "count-container">
-            <h1 class="title">KILL<span>COUNT</span></h1>
-            <h2 class="count-num">0</h2>
-        </div>
-        <div class = "screen" id="screen"></div>
-        <div class = "movie-info-container">
-            <h1 class="onscreen-title">WHICH IS AS MANY ONSCREEN KILLS AS...</h1>
-            <div class = "image-container" onmouseenter="fadeOut()" onmouseleave="fadeIn()">
-                <img class = "char-image" />
-                <div class="char-name-container fadeInLeft"><h1 class="char-name">Char Name</h1></div>
-                <div class="movie-title-container fadeInRight"><h1 class="movie-title">Movie Title</h1></div>
+        <div class="main-container">
+            <div class = "count-container">
+                <h1 class="title">KILL<span>COUNT</span></h1>
+                <h2 class="count-num">0</h2>
+            </div>
+            <div class = "screen" id="screen">
+                <div class = "genre-container">
+                    <button class = "genre-button" id="sf-button" onClick="sciFi()" ontouchstart="sciFi()">SCI-FI</button><br><br>
+                    <button class = "genre-button genre-selected" id="fantasy-button" onClick="fantasy()" ontouchstart="fantasy()">FANTASY</button><br><br>
+                </div>
+                <div class="muteButton">
+                    <strong onClick="handleMute()" class="material-icons">
+                        volume_up
+                    </strong>
+                </div>
+            </div>
+            <div class = "movie-info-container">
+                <h1 class="onscreen-title">WHICH IS AS MANY ONSCREEN KILLS AS...</h1>
+                <div class = "image-container" onmouseenter="fadeOut()" onmouseleave="fadeIn()">
+                    <img class = "char-image" />
+                    <div class="char-name-container fadeInLeft"><h1 class="char-name">Char Name</h1></div>
+                    <div class="movie-title-container fadeInRight"><h1 class="movie-title">Movie Title</h1></div>
+                </div>
             </div>
         </div>
+        <div class = "buttons">
+            <h1 class = "kill-button" onClick="attack()" ontouchstart="attack()">KILL!</h1><br><br>
+            <h1 class = "restart-button" onClick="restart()" ontouchstart="restart()">restart</h1><br><br>
+        </div>
+        <img class = "seats" src = "./assets/images/backgrounds/seatsShadow.png" />
     </div>
-    <div class = "buttons">
-        <button class = "kill-button" onmousedown="attack()" ontouchstart="attack()">KILL</button><br><br>
-        <button class = "kill-button" onClick="handleMute()" ontouchstart="handleMute()">MUTE</button><br><br>
-        <button class = "kill-button" onClick="sciFi()" ontouchstart="sciFi()">SCIFI</button><br><br>
-        <button class = "kill-button" onClick="fantasy()" ontouchstart="fantasy()">FANTASY</button><br><br>
-        <!-- <button onmousedown="zoomIn()" onmouseup="clearmove()" ontouchstart="zoomIn()">Zoom In</button>
-        <button onmousedown="zoomOut()" onmouseup="clearmove()" ontouchstart="zoomOut()">Zoom out</button><br><br>
-        <button onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button> -->
+    <div class="footer">
+        <h1 class="ginoreyes">Gino Reyes</h1>
+        <a href="https://github.com/grmreyes/">
+            <img src={window.github} class="footer-link"/>
+        </a>
+        <a href="mailto:grmreyes@gmail.com/">
+            <img src={window.email} class="footer-link"/>
+        </a>
     </div>
-    <img class = "seats" src = "./assets/images/backgrounds/seatsShadow.png" />
-</div>
 
 <script type="text/javascript">
     startGame();
