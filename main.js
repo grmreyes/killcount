@@ -174,7 +174,7 @@ var myGameArea = {
         if(this.enemyPresent===false){
             enemyChar.x = 170;
             enemyChar.y = enemyDefY;
-            enemyChar.speedX = (Math.random()*-2)-2;
+            enemyChar.speedX = (Math.random()*-3)-3;
             enemyChar.speedY = 0;
             this.enemyPresent=true;
         }

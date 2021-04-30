@@ -446,6 +446,8 @@ function preload() {
     }
 }
 
+var audioElement = new Audio('./assets/sfx/swing.wav');
+
 preload(
 "https://killcount.s3-us-west-1.amazonaws.com/1.jpg"
 ,"https://killcount.s3-us-west-1.amazonaws.com/2.jpg"
