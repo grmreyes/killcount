@@ -587,7 +587,6 @@ function handleMute(){
         myGameArea.muted = false;
         document.querySelector(".muteButton .material-icons").innerHTML = "volume_up";
     }
-    console.log(myGameArea.muted)
 }
 
 function fadeOut(){
