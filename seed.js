@@ -295,8 +295,8 @@ movie141.imageUrl="https://killcount.s3-us-west-1.amazonaws.com/141.jpg"
 
 
 movieData[movie1.count] = movieData[movie1.count] ? movieData[movie1.count].concat(movie1) : [movie1];
-// movieData[movie2.count] = movieData[movie2.count] ? movieData[movie2.count].concat(movie2) : [movie2];
-// movieData[movie3.count] = movieData[movie3.count] ? movieData[movie3.count].concat(movie3) : [movie3];
+movieData[movie2.count] = movieData[movie2.count] ? movieData[movie2.count].concat(movie2) : [movie2];
+movieData[movie3.count] = movieData[movie3.count] ? movieData[movie3.count].concat(movie3) : [movie3];
 movieData[movie4.count] = movieData[movie4.count] ? movieData[movie4.count].concat(movie4) : [movie4];
 movieData[movie5.count] = movieData[movie5.count] ? movieData[movie5.count].concat(movie5) : [movie5];
 movieData[movie6.count] = movieData[movie6.count] ? movieData[movie6.count].concat(movie6) : [movie6];

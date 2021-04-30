@@ -161,6 +161,7 @@ body {
   transition: all 0.3s;
 }
 
+
 .count-num {
   position: relative;
   text-align: center;
@@ -186,12 +187,10 @@ body {
 }
 
 
-.title span {
+.title strong{
   font-weight: 600;
   color: white;
 }
-
-
 
 
 
@@ -275,6 +274,7 @@ body {
   transition: all 0.3s;
   z-index: 2;
   background: rgba(0, 0, 0, 0.438);
+  /* background: white */
 }
 
 .movie-title{

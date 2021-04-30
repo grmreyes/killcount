@@ -601,7 +601,6 @@ function endSplash(){
     document.querySelector(".splash-down").classList.add("splashRight");
     startGame();
     document.querySelector(".title").classList.remove("red")
-    swing.play();
     if(bg1.sound.paused){
         bg1.play()
     }
