@@ -190,6 +190,7 @@ function background(image, x, y) {
     this.y = y;
     this.update = function() {
         ctx = myGameArea.context;
+        ctx.imageSmoothingEnabled = false;
         ctx.drawImage(this.image, this.x, this.y) 
     }
 }
