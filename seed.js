@@ -611,4 +611,5 @@ preload(
 ,"./assets/images/scifi/enemy/Run/sfrun8.png"
 ,"./assets/images/scifi/enemy/Run/sfrun9.png"
 ,"./assets/images/scifi/enemy/Run/sfrun10.png"
+,"./assets/images/scifi/enemy/Die/sfdie12.png"
 )
