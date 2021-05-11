@@ -11,9 +11,6 @@ canvas {
       image-rendering: -o-pixelated;
       image-rendering: pixelated;
   image-rendering: crisp-edges;
-  /* -webkit-box-shadow:0 0 50px 10px rgba(255, 255, 255, 0.315);
-    -moz-box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.315); 
-    box-shadow:0 0 50px 10px rgba(255, 255, 255, 0.315); */
 }
 
 .screen {
@@ -83,7 +80,6 @@ canvas {
   text-align: center;
   background: white;
   color: black;
-  /* padding: 12px 15px; */
   top: 40%;
   left: 50%;
   transform: translateX(-50%);

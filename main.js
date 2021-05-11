@@ -8,7 +8,7 @@ var background1 = new Image();
 background1.src = "./assets/images/backgrounds/bg1.jpg"
 
 var seats = new Image();
-seats.src = "./assets/images/backgrounds/seats.png"
+seats.src = "./assets/images/backgrounds/seatsShadow.png"
 
 //hero
 
@@ -222,7 +222,6 @@ function hero(image, x, y) {
         this.frameCount +=1;
         //animations
         if(this.animation==="idle"){
-            //console.log(this.frameCount)
             if(this.frameCount>=this.animSpeed*8){
                 this.image=hkIdle1
                 this.frameCount = 0;
@@ -250,7 +249,6 @@ function hero(image, x, y) {
             }
         }
         if(this.animation==="attack1"){
-            //console.log(this.frameCount)
             if(this.frameCount>=this.animSpeed*6){
                 this.frameCount = 0;
                 this.animation="idle"
@@ -267,7 +265,6 @@ function hero(image, x, y) {
             }
             else if(this.frameCount>=this.animSpeed*2){
                 this.image=hkAtk13
-                //hitbox
             }
             else if(this.frameCount>=this.animSpeed*1){
                 this.image=hkAtk12
@@ -277,7 +274,6 @@ function hero(image, x, y) {
             }
         }
         if(this.animation==="attack2"){
-            //console.log(this.frameCount)
             if(this.frameCount>=this.animSpeed*6){
                 this.frameCount = 0;
                 this.animation="idle"
@@ -297,14 +293,12 @@ function hero(image, x, y) {
             }
             else if(this.frameCount>=this.animSpeed*1){
                 this.image=hkAtk22
-                //hitbox
             }
             else{
                 this.image=hkAtk21
             }
         }
         if(this.animation==="attack3"){
-            //console.log(this.frameCount)
             if(this.frameCount>=this.animSpeed*8){
                 this.frameCount = 0;
                 this.animation="idle"
@@ -327,7 +321,6 @@ function hero(image, x, y) {
             }
             else if(this.frameCount>=this.animSpeed*2){
                 this.image=hkAtk33
-                //hitbox
             }
             else if(this.frameCount>=this.animSpeed*1){
                 this.image=hkAtk32
@@ -364,7 +357,6 @@ function enemy(image, x, y) {
         this.frameCount +=1;
         //animations
         if(this.animation==="run"){
-            //console.log(this.frameCount)
             if(this.frameCount>=this.animSpeed*10){
                 this.image=hkEnemyRun1
                 this.frameCount = 0;
